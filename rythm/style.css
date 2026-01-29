@@ -1,0 +1,65 @@
+body {
+  background: #111;
+  color: #fff;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+#game-container {
+  position: relative;
+  width: 400px;
+  height: 90vh;
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid #fff;
+  background: #222;
+  overflow: hidden;
+}
+
+.lane {
+  width: 90px;
+  height: 100%;
+  border-left: 1px solid #555;
+  border-right: 1px solid #555;
+  position: relative;
+}
+
+.note {
+  position: absolute;
+  width: 80px;
+  height: 40px;
+  left: 5px;
+  border-radius: 8px;
+  background: #0f0;
+  animation: fall linear 3s forwards;
+}
+
+/* Hit zone styling */
+#hit-zone {
+  position: absolute;
+  bottom: 50px;
+  width: 100%;
+  height: 50px;
+  background: rgba(255,0,0,0.5);
+}
+
+/* Animation: fall from top to bottom */
+@keyframes fall {
+  0% { top: -5vh; }
+  100% { top: 90vh; }
+}
+
+/* Flash effect when key pressed */
+.lane.active {
+  box-shadow: 0 0 20px 5px yellow inset;
+}
+
+#score {
+  margin-top: 20px;
+  font-size: 24px;
+}
