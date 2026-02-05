@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Slot Machine</title>
+</head>
+<body>
+
+    
+    <h1 style="text-align: center;">PLAN: <br> Animation schnell machen, und während es sich dreht die kombi reinpacken.
+        dann die kombi runterfallen lassen und so tun als wäre das die random kombi.</h1>
+
+    <div id="game-container">
+        <div class="lane" id="d">
+            <div class="symbole" id="links"></div> 
+        </div>
+
+        <div class="lane" id="f">
+            <div class="symbole" id="mitte"></div> 
+        </div>
+
+        <div class="lane" id="j">
+            <div class="symbole" id="rechts"></div> 
+        </div>
+        
+        <div id="hit-zone"></div>
+
+    </div>
+
+    <div style="display: flex; width: 500;">
+
+        <button onclick="stoppp()">STOP</button>
+        <button onclick="dreh()">DREH</button>
+        
+        <button onclick="luckyzahleneinsetzen()">einsetzen</button>
+        <button onclick="">try</button>
+
+        <button onclick="sapin()"></button>
+
+    </div>
+<script src="script.js"></script>
+</body>
+</html>
