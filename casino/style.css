@@ -1,0 +1,59 @@
+body {
+  background: #0f0f0f;
+  color: #fff;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+#game-container {
+  position: relative;
+  width: 40vh;
+  height: 50vh;
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid #fff;
+  background: #222;
+}
+.lane {
+  width: 32%;
+  height: 100%;
+  border-left: 1px solid #555;
+  border-right: 1px solid #555;
+  position: relative;
+  overflow: hidden;
+}
+
+button {
+  height: 5vh;
+  width: 10vh;
+  font-size: 2vh;
+}
+
+.symbole {
+
+  animation: spin 1s linear infinite;
+  animation-play-state: paused;
+
+  position: absolute;
+  font-size: 150px;
+  width: 1ch;
+  bottom: -10%;
+}
+@keyframes spin {
+  from {transform: translateY(0);}
+  to {transform: translateY(66.66%); }
+}
+
+#hit-zone {
+  position: absolute;
+  bottom: 35%;
+  width: 100%;
+  height: 25%;
+  background: rgba(154, 154, 154, 0.2);
+  border: 5px solid red;
+}
+
